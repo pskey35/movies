@@ -31,6 +31,15 @@ export default function Header(){
                         })}
                     </ul>
                 </div>
+
+                <div className="nav-center">
+                        <div>
+                            <input></input>
+                            <div className="lupa-icon">
+                                
+                            </div>
+                        </div>
+                </div>
                 <div className="nav-right">
 
                 </div>

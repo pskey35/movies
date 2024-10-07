@@ -45,6 +45,36 @@
 }
 
 
+
+.nav-center{
+
+    & > div{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
+        input{
+            opacity:0;
+            transition:all 200ms ease;
+        }
+
+
+        .lupa-icon{
+            width:35px;
+            height:35px;    
+            padding:9px;
+            border-radius:999px;
+            background:transparent;
+            cursor:pointer;
+
+            &:hover{
+                background:rgba(255, 255, 255, 0.39);
+                
+            }
+        }
+    }
+}
+
 .nav-right{
     flex:1;
     height:100%;

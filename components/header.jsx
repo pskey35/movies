@@ -14,21 +14,37 @@ export default function Header() {
         "Musica"
     ]
 
+    let clickCount = 1
 
     const clickLupa = () => {
+
+        clickCount++
         const inputElement = document.querySelector(".input-element")
         inputElement.style.cssText = "opacity:1;width:100%"
 
-
         //si se da click cuando el viewport es menor a 800 esporq estan en celular
-        if(window.innerWidth <= 800){
+        if (window.innerWidth <= 800) {
             const logoImg = document.querySelector("#logo")
-            logoImg.style.display = "none"
-
-
             const home_link_header = document.querySelector(".home-link_header")
-            home_link_header.style.cssText = "display:none"
+
+            if (clickCount % 2 == 0) {
+                //si clickCount es el segundo click entonces entra aqui esto abre la barrra
+
+                logoImg.style.display = "none"
+                home_link_header.style.cssText = "display:none"
+
+            } else {
+                //si es inpar el conteo esto cierra la barra
+                inputElement.style.cssText = "opacity:0;width:10%"
+                logoImg.style.display = "block"
+                home_link_header.style.cssText = "display:block"
+            }
+
+
+            console.log(clickCount)
         }
+
+
     }
 
 

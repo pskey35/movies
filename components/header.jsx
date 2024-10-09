@@ -17,15 +17,20 @@ export default function Header() {
     let clickCount = 1
 
     const clickLupa = () => {
-
+        //esto sirve para contar los clicks dado
         clickCount++
         const inputElement = document.querySelector(".input-element")
         inputElement.style.cssText = "opacity:1;width:100%"
 
+
+        const logoImg = document.querySelector("#logo")
+        const home_link_header = document.querySelector(".home-link_header")
+
+
+
         //si se da click cuando el viewport es menor a 800 esporq estan en celular
         if (window.innerWidth <= 800) {
-            const logoImg = document.querySelector("#logo")
-            const home_link_header = document.querySelector(".home-link_header")
+
 
             if (clickCount % 2 == 0) {
                 //si clickCount es el segundo click entonces entra aqui esto abre la barrra
@@ -34,15 +39,23 @@ export default function Header() {
                 home_link_header.style.cssText = "display:none"
 
             } else {
-                //si es inpar el conteo esto cierra la barra
+                //si es inpar el conteoClicks esto cierra la barra
                 inputElement.style.cssText = "opacity:0;width:10%"
                 logoImg.style.display = "block"
                 home_link_header.style.cssText = "display:block"
             }
+        } else if (window.innerWidth > 800) {
+            //esto es en PC
 
+            if (!(clickCount % 2 == 0)) {
+                //si es inpar el conteoClicks esto cierra la barra
+                inputElement.style.cssText = "opacity:0;width:10%"
+                logoImg.style.display = "block"
+                home_link_header.style.cssText = "display:block"
 
-            console.log(clickCount)
+            }
         }
+
 
 
     }

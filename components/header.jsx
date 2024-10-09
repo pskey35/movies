@@ -6,7 +6,6 @@ export default function Header() {
     const navigate = useNavigate();
 
 
-
     const listaNav = [
         "Peliculas",
         "Series",
@@ -16,10 +15,20 @@ export default function Header() {
     ]
 
 
-    const clickLupa = ()=>{
+    const clickLupa = () => {
         const inputElement = document.querySelector(".input-element")
-        inputElement.style.cssText = "opacity:1"
-    
+        inputElement.style.cssText = "opacity:1;width:100%"
+
+
+        //si se da click cuando el viewport es menor a 800 esporq estan en celular
+        if(window.innerWidth <= 800){
+            const logoImg = document.querySelector("#logo")
+            logoImg.style.display = "none"
+
+
+            const home_link_header = document.querySelector(".home-link_header")
+            home_link_header.style.cssText = "display:none"
+        }
     }
 
 
@@ -27,8 +36,8 @@ export default function Header() {
         <div className="nav-header">
             <div className="nav-header-content">
                 <div className="nav-left">
-                    <Link to="/">
-                        <img src="/LOGO-SVG/logo.svg"></img>
+                    <Link to="/" className="home-link_header">
+                        <img src="/LOGO-SVG/logo.svg" id="logo"></img>
                     </Link>
 
                     <ul>
@@ -51,6 +60,17 @@ export default function Header() {
                     </div>
                 </div>
                 <div className="nav-right">
+                    <div className="icon-right_header">
+                        <div className="icon-login_header">
+                            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 16.9998C6 17.3511 6 17.5268 6.01567 17.6795C6.14575 18.9473 7.0626 19.9945 8.30206 20.291C8.45134 20.3267 8.6255 20.3499 8.97368 20.3963L15.5656 21.2753C17.442 21.5254 18.3803 21.6505 19.1084 21.361C19.7478 21.1068 20.2803 20.6406 20.6168 20.0405C21 19.3569 21 18.4104 21 16.5174V7.48232C21 5.58928 21 4.64275 20.6168 3.95923C20.2803 3.35911 19.7478 2.89288 19.1084 2.63868C18.3803 2.34914 17.442 2.47423 15.5656 2.72442L8.97368 3.60335C8.62546 3.64978 8.45135 3.67299 8.30206 3.7087C7.0626 4.0052 6.14575 5.05241 6.01567 6.32018C6 6.47288 6 6.64854 6 6.99984M12 7.99984L16 11.9998M16 11.9998L12 15.9998M16 11.9998H3" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <span>
+                            Iniciar sesion
+                        </span>
+
+                    </div>
 
                 </div>
             </div>

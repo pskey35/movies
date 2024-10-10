@@ -27,6 +27,9 @@ export default function Header() {
         const home_link_header = document.querySelector(".home-link_header")
 
 
+        const nav_center = document.querySelector(".nav-center")
+
+        const nav_right = document.querySelector(".nav-right")
 
         //si se da click cuando el viewport es menor a 800 esporq estan en celular
         if (window.innerWidth <= 800) {
@@ -37,12 +40,17 @@ export default function Header() {
 
                 logoImg.style.display = "none"
                 home_link_header.style.cssText = "display:none"
+                nav_center.style.cssText = "display:none"
+
+                nav_right.style.cssText = "width:100%"
 
             } else {
                 //si es inpar el conteoClicks esto cierra la barra
                 inputElement.style.cssText = "opacity:0;width:10%"
                 logoImg.style.display = "block"
                 home_link_header.style.cssText = "display:block"
+                nav_center.style.cssText = "display:block"
+                nav_right.style.cssText = "width:auto"
             }
         } else if (window.innerWidth > 800) {
             //esto es en PC
@@ -53,6 +61,15 @@ export default function Header() {
                 logoImg.style.display = "block"
                 home_link_header.style.cssText = "display:block"
 
+                nav_center.style.cssText = "display:flex"
+                nav_right.style.cssText = "margin-left:0px"
+            } else {
+                //aqui entra cuando se abre el search 
+                //nav_right.style.cssText = "width:60%;max-width:580px"
+
+                nav_center.style.cssText = "display:none"
+
+                nav_right.style.cssText = "flex:1;margin-left:20px"
             }
         }
 
@@ -69,6 +86,10 @@ export default function Header() {
                         <img src="/LOGO-SVG/logo.svg" id="logo"></img>
                     </Link>
 
+
+                </div>
+
+                <div className="nav-center">
                     <ul>
                         {listaNav.map((dataUnidad) => {
                             return (
@@ -76,10 +97,11 @@ export default function Header() {
                             )
                         })}
                     </ul>
-                </div>
 
-                <div className="nav-center">
-                    <div>
+
+                </div>
+                <div className="nav-right">
+                    <div className="lupaIcon-header">
                         <input className="input-element"></input>
                         <div className="lupa-icon" onClick={clickLupa}>
                             <svg class="icono-busqueda " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -87,8 +109,6 @@ export default function Header() {
                             </svg>
                         </div>
                     </div>
-                </div>
-                <div className="nav-right">
                     <div className="icon-right_header">
                         <div className="icon-login_header">
                             <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">

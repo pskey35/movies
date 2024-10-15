@@ -73,16 +73,7 @@ export default function Home() {
     }, [, listaPlayIndice])
 
 
-    /*
-        const finalVideo = ()=>{
-            const video_trailer_home = document.querySelector("#video-trailer_home")
-            video_trailer_home.style.opacity = "0"
     
-            setTimeout(()=>{
-                video_trailer_home.style.opacity = "1"
-    
-            },1000)
-        }*/
     return (
         <div className="ventana_home">
             <div className="ventanaContent_home">

@@ -29,9 +29,9 @@ export default function Home() {
 
                 if (prevState == listaAudio.length - 1) {
                     //si la listaAudio llega al final del video se reinicia desde el primero
-                    console.log("entro a if prevState igual a listaAudio.length - 1")
-                    console.log(prevState, "---", listaAudio.length - 1)
-                    console.log(listaAudio[prevState])
+                //    console.log("entro a if prevState igual a listaAudio.length - 1")
+                  //  console.log(prevState, "---", listaAudio.length - 1)
+                  //  console.log(listaAudio[prevState])
                     return 0
                 }
 

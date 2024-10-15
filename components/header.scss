@@ -101,15 +101,18 @@
         height: 80%;
         width: 100%;
 
-        input {
+        .input-element {
             opacity: 0;
             width: 10%;
             transition: all 100ms ease;
             height: 100%;
-            background: #515151;
             border-radius: 11px;
             color: white;
-            padding-left: 14px
+            padding-left: 14px;
+            backdrop-filter: blur(10px);
+            border: 1px solid #ffffff8a;
+            backdrop-filter: blur(10px);
+            background: transparent;
         }
 
 

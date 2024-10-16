@@ -51,10 +51,12 @@ export default function Home() {
 
         const video_trailer_home = document.querySelector("#video-trailer_home")
 
+   
         video_trailer_home.style.opacity = "0"
 
         const time = setTimeout(() => {
             video_trailer_home.style.opacity = "1"
+     
         }, 900)
 
 
@@ -79,6 +81,7 @@ export default function Home() {
         return () => {
             clearInterval(interval)
             clearTimeout(time)
+          
         }
 
 
@@ -93,12 +96,17 @@ export default function Home() {
     }, [, listaPlayIndice])
 
 
+    useEffect(()=>{
+        const audio = document.querySelector("#audio")
+        audio.click()
+    },[])
+
 
     return (
         <div className="ventana_home">
             <div className="ventanaContent_home">
                 <div className="videoContainer_home">
-                    <video id="video-trailer_home" >
+                    <video id="video-trailer_home" muted autoplay playsinline>
                         <source src={listaVideo[listaPlayIndice]}></source>
                     </video>
                     <audio id="audio">

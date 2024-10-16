@@ -51,12 +51,12 @@ export default function Home() {
 
         const video_trailer_home = document.querySelector("#video-trailer_home")
 
-   
+
         video_trailer_home.style.opacity = "0"
 
         const time = setTimeout(() => {
             video_trailer_home.style.opacity = "1"
-     
+
         }, 900)
 
 
@@ -72,7 +72,7 @@ export default function Home() {
 
         const audio = document.querySelector("#audio")
 
-        if(audio){
+        if (audio) {
             audio.load()
             audio.play()
         }
@@ -81,7 +81,7 @@ export default function Home() {
         return () => {
             clearInterval(interval)
             clearTimeout(time)
-          
+
         }
 
 
@@ -90,29 +90,55 @@ export default function Home() {
 
 
 
-
-
-     
     }, [, listaPlayIndice])
 
 
-    useEffect(()=>{
+    useEffect(() => {
         const audio = document.querySelector("#audio")
         audio.click()
-    },[])
+    }, [])
 
 
     return (
         <div className="ventana_home">
             <div className="ventanaContent_home">
                 <div className="videoContainer_home">
+
                     <video id="video-trailer_home" muted autoplay playsinline>
                         <source src={listaVideo[listaPlayIndice]}></source>
                     </video>
                     <audio id="audio">
                         <source src={listaAudio[listaPlayIndice]} type="audio/mp3" />
                     </audio>
+                    <div className="videoSection_home">
+                        <div className="videoSection-left_home">
+                            <div>estrellas</div>
+                            <div className="video-title_home">Deadpool & Wolverine</div>
+                            <div>info</div>
+                            <div>Lorem ipsum dolor sit amet consectetur 
+                                adipisicing elit. Id assumenda earum rem,
+                                 ex voluptatibus eaque, iure odio cumque 
+                                 incidunt eos tempora omnis similique labore
+                                  a aspernatur, autem architecto sint adipisci.</div>
+                            <div className="verAhora-boton_home">
+                                <span>icono</span>
+                                <span>Ver Ahora</span>
+                            </div>
+                        </div>
+                        <div className="videoSection-right_home">
+                            <div className="barra-right_home">
+
+                            </div>
+                            <div className="flechas-right_home">
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+
+                    </div>
                 </div>
+
 
             </div>
         </div>

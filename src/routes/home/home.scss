@@ -16,6 +16,7 @@
         height: auto;
         display: grid;
         place-items: center;
+        position: relative;
 
 
         video {
@@ -29,5 +30,116 @@
             height: 450px;
             object-fit: cover;
         }
+
+
+        //#audio{}
+
+
+        .videoSection_home {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            color: white;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            height: calc(100% - 70px);
+            padding-left: 3vw;
+            padding-right: 1vw;
+
+
+            .videoSection-left_home {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                width: 100%;
+                max-width: 900px;
+
+
+
+
+                .video-title_home {
+                    font-weight: 700;
+                    font-size: 50px;
+                }
+
+                .verAhora-boton_home {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 150px;
+
+                    span:nth-child(1) {
+                        display: inline-block;
+                        width: 50px;
+                        height: 50px;
+                        background: orange;
+
+
+                    }
+
+
+                    span:nth-child(2) {
+                        color: blue;
+                    }
+                }
+            }
+
+            .videoSection-right_home {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                padding-right: 50px;
+
+
+                .barra-right_home {
+                    width: 3px;
+                    height: 100%;
+                    background: white;
+
+                    @media (max-width:800px) {
+                        display: none;
+                    }
+                }
+
+                .flechas-right_home {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    &>div {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 999px;
+                        background: green;
+
+                        @media(max-width:800px) {
+                            margin-top: 5px;
+                            margin-bottom: 5px;
+                        }
+                    }
+
+                    @media(max-width:800px) {
+                        flex-direction: column;
+
+                    }
+                }
+
+
+
+                @media(max-width:800px) {
+                    padding-right: 10px;
+                    justify-content: flex-end;
+                }
+            }
+
+
+        }
+
     }
+
+
+
 }

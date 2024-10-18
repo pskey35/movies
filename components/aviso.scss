@@ -1,0 +1,120 @@
+.avisoVentana_aviso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: black;
+    width: 100%;
+    height: 100%;
+}
+
+.aviso-content_aviso {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5vw;
+
+    .firstBlock{
+        display:flex;
+        justify-content: space-between;
+        h1 {
+            color: white;
+            font-size: 20px;
+        }
+
+        div{
+            color: white;
+            height: 50px;
+            width: 50px;
+            cursor: pointer;
+            background: #959595;
+            border-radius: 999px;
+            padding: 13px;
+            border: 2px solid #514750;
+            
+
+            img{
+                width: 100%;
+                height:100%;
+                object-fit:contain;
+
+            }
+        }
+    }
+
+    .question_aviso {
+        width: 100%;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom:10%;
+        justify-content: center;
+
+        &>h5 {
+            color: white;
+            font-size: 40px;
+            margin-bottom:5%;
+
+            @media(max-width:800px){
+                font-size:35px;
+            }
+        }
+    }
+}
+
+
+
+
+.perfiles_aviso{
+    display:flex;
+    justify-content:center;
+    grid-gap:30px;
+    flex-wrap:wrap;
+}
+
+
+.perfil-item_aviso {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .image_aviso {
+        width: 140px;
+        height: 140px;
+        border: 3px solid white;
+        border-radius: 999px;
+        overflow: hidden;
+
+        img {
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-position: top;
+            object-position: left;
+            object-fit: scale-down;
+            object-position: center;
+
+        }
+    }
+    & > span {
+        color: #9f9f9f;
+        font-weight: 800;
+    }
+}
+
+
+
+.editBoton_aviso{
+    color: white;
+    background: #28202f;
+    padding: 10px 40px;
+    border-radius: 10px;
+    position: relative;
+    top: 20%;
+    border: 2px solid #594761;
+    cursor:pointer;
+}

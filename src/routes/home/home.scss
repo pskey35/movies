@@ -1,5 +1,6 @@
 .ventana_home {
     flex: 1;
+    padding-bottom:35px;
 }
 
 
@@ -142,4 +143,49 @@
 
 
 
+}
+
+
+.section-2_home{
+    width: 100%;
+    color:white;
+    margin-top:20px;
+
+    .barra_home{
+        width:100%;
+        display:flex;
+        justify-content:space-between;
+        align-items: center;
+        padding:0 20px;
+
+
+        & > span{
+            display:inline-block;
+            flex:2;
+            height:3px;
+            border-radius:80px;
+            background:white;
+            margin:0 10px;
+        }
+    }
+
+
+    .galeriaVideos_home{
+        width:100%;
+        
+        .galeriaVideos-content_home{
+            width:100%;
+
+            .itemVideo_home{
+                max-width:250px;
+                height:300px;
+
+                img{
+                    width:100%;
+                    height:100%;
+                }
+            }
+        }
+
+    }
 }

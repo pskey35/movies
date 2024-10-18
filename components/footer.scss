@@ -5,8 +5,11 @@
     width: 100%;
 
 
+
     @media(max-width:800px) {
-        display: block
+        display: block;
+        position:fixed;
+        bottom:0;
     }
 }
 

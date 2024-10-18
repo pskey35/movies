@@ -98,6 +98,14 @@ export default function Home() {
         audio.click()
     }, [])
 
+    const listaDataVideo = [
+        {
+            id: "id-1",
+            name: "The avengers",
+            info: "lorem ipsum dolor aismet",
+            imageUrl: "https://lumiere-a.akamaihd.net/v1/images/eu_disneyplus_avengers-endgame_mob_m_928f44f1.jpeg?region=100,0,600,600"
+        }
+    ]
 
     return (
         <div className="ventana_home">
@@ -115,11 +123,11 @@ export default function Home() {
                             <div>estrellas</div>
                             <div className="video-title_home">Deadpool & Wolverine</div>
                             <div>info</div>
-                            <div>Lorem ipsum dolor sit amet consectetur 
+                            <div>Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Id assumenda earum rem,
-                                 ex voluptatibus eaque, iure odio cumque 
-                                 incidunt eos tempora omnis similique labore
-                                  a aspernatur, autem architecto sint adipisci.</div>
+                                ex voluptatibus eaque, iure odio cumque
+                                incidunt eos tempora omnis similique labore
+                                a aspernatur, autem architecto sint adipisci.</div>
                             <div className="verAhora-boton_home">
                                 <span>icono</span>
                                 <span>Ver Ahora</span>
@@ -136,6 +144,30 @@ export default function Home() {
                         </div>
 
 
+                    </div>
+                </div>
+                <div className="section-2_home">
+                    <div className="barra_home">
+                        <div>
+                            Generos populares
+                        </div>
+                        <span>
+
+                        </span>
+                        <div>
+                            Generos
+                        </div>
+                    </div>
+                    <div className="galeriaVideos_home">
+                        <div className="galeriaVideos-content_home">
+                            {listaDataVideo.map((dataUnidad) =>
+                                <div className="itemVideo_home" key={dataUnidad.id}>
+                                    <img src={dataUnidad.imageUrl}>
+                                    </img>
+                                </div>
+                            )}
+
+                        </div>
                     </div>
                 </div>
 

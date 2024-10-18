@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react"
+import Aviso from '../../../components/aviso'
 import "./home.scss"
+
+
 export default function Home() {
 
     //este es el indice para cambiar de videos en el trailer
@@ -260,9 +263,8 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-
-
             </div>
+            <Aviso></Aviso>
         </div>
     )
 }

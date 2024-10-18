@@ -27,9 +27,10 @@ export default function Home() {
 
 
     useEffect(() => {
-
-
+        const video_trailer_home = document.querySelector("#video-trailer_home")
+        
         const interval = setInterval(() => {
+            video_trailer_home.style.opacity = 1
             //cada 3 segundos se cambiara de video
             setListaPlayIndice(prevState => {
 
@@ -40,26 +41,15 @@ export default function Home() {
                     //  console.log(listaVideo[prevState])
                     return 0
                 }
-
-
-
                 return prevState + 1
             })
+            
         }, 6000)
-
-
-
-        const video_trailer_home = document.querySelector("#video-trailer_home")
-
-
-        video_trailer_home.style.opacity = "0"
-
-        const time = setTimeout(() => {
-            video_trailer_home.style.opacity = "1"
-
-        }, 900)
-
-
+        const time = setTimeout(()=>{
+            video_trailer_home.style.opacity = 0
+        }, 5500)
+        //video_trailer_home.classList.add('fadeOut')   
+        
 
         if (video_trailer_home) {
 
@@ -90,7 +80,7 @@ export default function Home() {
 
 
 
-    }, [, listaPlayIndice])
+    }, [listaPlayIndice])
 
 
     useEffect(() => {
@@ -112,7 +102,7 @@ export default function Home() {
             <div className="ventanaContent_home">
                 <div className="videoContainer_home">
 
-                    <video id="video-trailer_home" muted autoplay playsinline>
+                    <video id="video-trailer_home" muted autoPlay playsInline>
                         <source src={listaVideo[listaPlayIndice]}></source>
                     </video>
                     <audio id="audio">

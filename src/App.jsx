@@ -11,15 +11,18 @@ function App() {
 
 
   return (
+
     <div className="ventana">
 
       <Header></Header>
+
       <Routes>
 
         <Route path="/" element={<Home></Home>}>
 
         </Route>
       </Routes>
+      
       <Footer></Footer>
     </div>
   )

@@ -195,7 +195,21 @@ export default function Home() {
                                 incidunt eos tempora omnis similique labore
                                 a aspernatur, autem architecto sint adipisci.</div>
                             <div className="verAhora-boton_home">
-                                <span>icono</span>
+                                <span>
+                                <svg id="Capa_8" width="28" data-name="Capa 2" viewBox="0 0 20.38 20.38">
+                      <defs>
+                      
+                      </defs>
+                      <g id="Capa_1-2">
+                        <g>
+                          <path class="cls-9" d="m7.55,13.71l1.06-2.53c.27-.64.27-1.36,0-2l-1.06-2.53c-.23-.54.37-1.05.87-.75l6.11,3.76c.38.23.38.79,0,1.03l-6.11,3.76c-.5.31-1.1-.21-.87-.75Z"></path>
+                          <circle class="cls-2" cx="10.19" cy="10.19" r="9.94"></circle>
+                        </g>
+                      </g>
+                    </svg>
+
+
+                                </span>
                                 <span>Ver Ahora</span>
                             </div>
                         </div>

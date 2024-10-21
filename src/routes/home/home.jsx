@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
 import Aviso from '../../../components/aviso'
 import "./home.scss"
-
+import Header from "../../../components/header"
+import Footer from "../../../components/footer"
 
 export default function Home() {
 
@@ -174,111 +175,115 @@ export default function Home() {
     ]
 
     return (
-        <div className="ventana_home">
-            <div className="ventanaContent_home">
-                <div className="videoContainer_home">
+        <>
+            <Header></Header>
+            <div className="ventana_home">
+                <div className="ventanaContent_home">
+                    <div className="videoContainer_home">
 
-                    <video id="video-trailer_home" muted autoPlay playsInline>
-                        <source src={listaVideo[listaPlayIndice]}></source>
-                    </video>
-                    <audio id="audio">
-                        <source src={listaAudio[listaPlayIndice]} type="audio/mp3" />
-                    </audio>
-                    <div className="videoSection_home">
-                        <div className="videoSection-left_home">
-                            <div>estrellas</div>
-                            <div className="video-title_home">Deadpool & Wolverine</div>
-                            <div>info</div>
-                            <div>Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Id assumenda earum rem,
-                                ex voluptatibus eaque, iure odio cumque
-                                incidunt eos tempora omnis similique labore
-                                a aspernatur, autem architecto sint adipisci.</div>
-                            <div className="verAhora-boton_home">
+                        <video id="video-trailer_home" muted autoPlay playsInline>
+                            <source src={listaVideo[listaPlayIndice]}></source>
+                        </video>
+                        <audio id="audio">
+                            <source src={listaAudio[listaPlayIndice]} type="audio/mp3" />
+                        </audio>
+                        <div className="videoSection_home">
+                            <div className="videoSection-left_home">
+                                <div>estrellas</div>
+                                <div className="video-title_home">Deadpool & Wolverine</div>
+                                <div>info</div>
+                                <div>Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Id assumenda earum rem,
+                                    ex voluptatibus eaque, iure odio cumque
+                                    incidunt eos tempora omnis similique labore
+                                    a aspernatur, autem architecto sint adipisci.</div>
+                                <div className="verAhora-boton_home">
+                                    <span>
+                                        <svg id="Capa_8" width="28" data-name="Capa 2" viewBox="0 0 20.38 20.38">
+                                            <defs>
+
+                                            </defs>
+                                            <g id="Capa_1-2">
+                                                <g>
+                                                    <path class="cls-9" d="m7.55,13.71l1.06-2.53c.27-.64.27-1.36,0-2l-1.06-2.53c-.23-.54.37-1.05.87-.75l6.11,3.76c.38.23.38.79,0,1.03l-6.11,3.76c-.5.31-1.1-.21-.87-.75Z"></path>
+                                                    <circle class="cls-2" cx="10.19" cy="10.19" r="9.94"></circle>
+                                                </g>
+                                            </g>
+                                        </svg>
+
+
+                                    </span>
+                                    <span>Ver Ahora</span>
+                                </div>
+                            </div>
+                            <div className="videoSection-right_home">
+                                <div className="barra-right_home">
+
+                                </div>
+                                <div className="flechas-right_home">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div className="section-2_home">
+                        <div>
+
+
+                            <div className="barra_home">
+                                <div>
+                                    Generos populares
+                                </div>
                                 <span>
-                                <svg id="Capa_8" width="28" data-name="Capa 2" viewBox="0 0 20.38 20.38">
-                      <defs>
-                      
-                      </defs>
-                      <g id="Capa_1-2">
-                        <g>
-                          <path class="cls-9" d="m7.55,13.71l1.06-2.53c.27-.64.27-1.36,0-2l-1.06-2.53c-.23-.54.37-1.05.87-.75l6.11,3.76c.38.23.38.79,0,1.03l-6.11,3.76c-.5.31-1.1-.21-.87-.75Z"></path>
-                          <circle class="cls-2" cx="10.19" cy="10.19" r="9.94"></circle>
-                        </g>
-                      </g>
-                    </svg>
-
 
                                 </span>
-                                <span>Ver Ahora</span>
-                            </div>
-                        </div>
-                        <div className="videoSection-right_home">
-                            <div className="barra-right_home">
-
-                            </div>
-                            <div className="flechas-right_home">
-                                <div></div>
-                                <div></div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-                <div className="section-2_home">
-                    <div>
-
-
-                        <div className="barra_home">
-                            <div>
-                                Generos populares
-                            </div>
-                            <span>
-
-                            </span>
-                            <div>
-                                Generos
-                            </div>
-                        </div>
-                        <div className="generosPopulares_home">
-                            {generosPopulares.map((dataUnidad, index) => {
-                                return (
-                                    <div className="genero_home">
-                                        <h7>{dataUnidad.nombreGenero}</h7>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                    </div>
-
-
-
-
-                    <div className="galeriaVideos_home">
-                        <h1>Recien agregadas</h1>
-                        <div className="galeriaVideos-content_home">
-                            {listaDataVideo.map((dataUnidad) =>
-                                <div className="itemVideo_home" key={dataUnidad.id}>
-                                    <img src={dataUnidad.imageUrl}>
-                                    </img>
-                                    <div className="showHover_home">
-                                        <div>
-                                            Pelicula ...
-                                        </div>
-                                        <div>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing
-                                            elit. Provident numquam quas cum accusamus ipsa vel?
-                                        </div>
-                                    </div>
+                                <div>
+                                    Generos
                                 </div>
-                            )}
+                            </div>
+                            <div className="generosPopulares_home">
+                                {generosPopulares.map((dataUnidad, index) => {
+                                    return (
+                                        <div className="genero_home">
+                                            <h7>{dataUnidad.nombreGenero}</h7>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
 
+
+
+
+                        <div className="galeriaVideos_home">
+                            <h1>Recien agregadas</h1>
+                            <div className="galeriaVideos-content_home">
+                                {listaDataVideo.map((dataUnidad) =>
+                                    <div className="itemVideo_home" key={dataUnidad.id}>
+                                        <img src={dataUnidad.imageUrl}>
+                                        </img>
+                                        <div className="showHover_home">
+                                            <div>
+                                                Pelicula ...
+                                            </div>
+                                            <div>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing
+                                                elit. Provident numquam quas cum accusamus ipsa vel?
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+
+                            </div>
                         </div>
                     </div>
                 </div>
+                <Aviso></Aviso>
             </div>
-            <Aviso></Aviso>
-        </div>
+            <Footer></Footer>
+        </>
     )
 }
